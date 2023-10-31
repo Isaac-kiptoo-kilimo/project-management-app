@@ -31,7 +31,7 @@ const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use((0, express_1.json)());
-app.use('/project');
+// app.use('/project')
 app.use((error, req, res, next) => {
     res.json({
         message: error

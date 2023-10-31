@@ -6,7 +6,7 @@ dotenv.config()
 const app=express();
 
 app.use(json());
-app.use('/project')
+// app.use('/project')
 
 
 app.use((error:Error,req:Request,res:Response,next:NextFunction)=>{
