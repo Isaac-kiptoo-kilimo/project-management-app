@@ -1,8 +1,27 @@
-POST http://localhost:5000/users/loginUser
+POST http://localhost:5000/users/register
 Content-Type: application/json
 
 {
-    "fullName": "Emauel kip",
-    "email": "emanuelkip@gmail.com",
+    "fullName": "John Doe",
+    "email": "john@gmail.com",
     "password": "12345678"
 }
+
+
+### login 
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+   "email": "john@gmail.com",
+    "password": "12345678" 
+}
+
+### fetching users
+GET http://localhost:5000/users/
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZV9pZCI6IjBhZGJiM2I1LWRlYWQtNDQ4Zi05Y2ExLTQ0ZjkzZDBlNTUyNyIsIm5hbWUiOiJKYW5lIERvZSIsImVtYWlsIjoiamFuZUB5b3BtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTY5ODgyNjA3NywiZXhwIjoxNjk4ODI5Njc3fQ.SWJpmBD3z6n4cyeBupF5kGmuZwGGptMB3ragM_rN1rI
+
+
+### checking user details
+GET http://localhost:5000/users/check_user_details
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZV9pZCI6IjBhZGJiM2I1LWRlYWQtNDQ4Zi05Y2ExLTQ0ZjkzZDBlNTUyNyIsIm5hbWUiOiJKYW5lIERvZSIsImVtYWlsIjoiamFuZUB5b3BtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTY5ODgyNjA3NywiZXhwIjoxNjk4ODI5Njc3fQ.SWJpmBD3z6n4cyeBupF5kGmuZwGGptMB3ragM_rN1rI
