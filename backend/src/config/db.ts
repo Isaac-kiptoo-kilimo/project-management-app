@@ -1,5 +1,6 @@
 
 import * as dotenv from 'dotenv'
+import mssql from 'mssql'
 
 dotenv.config()
 
@@ -17,7 +18,5 @@ export const dbConfig={
       encrypt: false, 
       trustServerCertificate: true
     }
-
-
-
 }
+

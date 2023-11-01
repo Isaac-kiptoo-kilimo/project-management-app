@@ -1,9 +1,8 @@
-POST http://localhost:5000/users/register
+POST http://localhost:5000/users/loginUser
 Content-Type: application/json
 
 {
-    "name": "Emauel kip",
+    "fullName": "Emauel kip",
     "email": "emanuelkip@gmail.com",
-    "password": "12345678",
-    "cpassword": "12345678",
+    "password": "12345678"
 }
