@@ -1,12 +1,13 @@
 import express, { json ,Request,Response,NextFunction} from "express";
 import dotenv from 'dotenv'
+import userRouter from "./Routes/usersRoute";
 
 dotenv.config()
 
 const app=express();
 
 app.use(json());
-app.use('/project')
+app.use('/users',userRouter)
 
 
 app.use((error:Error,req:Request,res:Response,next:NextFunction)=>{
