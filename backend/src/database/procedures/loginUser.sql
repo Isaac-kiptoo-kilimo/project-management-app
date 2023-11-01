@@ -4,5 +4,5 @@ CREATE OR ALTER PROCEDURE loginUser(
 )
 AS 
 BEGIN
-SELECT * FROM Users WHERE email=@email
+    SELECT * FROM Users WHERE email=@email
 END
