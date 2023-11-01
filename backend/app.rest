@@ -2,8 +2,8 @@ POST http://localhost:5000/users/register
 Content-Type: application/json
 
 {
-    "fullName": "John Doe",
-    "email": "john@gmail.com",
+    "fullName": "milly millicent2",
+    "email": "millie2@gmail.com",
     "password": "12345678"
 }
 
@@ -13,15 +13,15 @@ POST http://localhost:5000/users/login
 Content-Type: application/json
 
 {
-   "email": "john@gmail.com",
-    "password": "12345678" 
+   "email": "millie2@gmail.com",
+   "password": "12345678" 
 }
 
 ### fetching users
 GET http://localhost:5000/users/
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZV9pZCI6IjBhZGJiM2I1LWRlYWQtNDQ4Zi05Y2ExLTQ0ZjkzZDBlNTUyNyIsIm5hbWUiOiJKYW5lIERvZSIsImVtYWlsIjoiamFuZUB5b3BtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTY5ODgyNjA3NywiZXhwIjoxNjk4ODI5Njc3fQ.SWJpmBD3z6n4cyeBupF5kGmuZwGGptMB3ragM_rN1rI
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgwZjg2MmMtMTgwYy00NThlLTlkMDAtNGIyNTEwNGVlNzFhIiwiZnVsbE5hbWUiOiJtaWxseSBtaWxsaWNlbnQyIiwiZW1haWwiOiJtaWxsaWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA1JFF2TW1ScWlHQlpDZWY4a1FGTjZ4ck9KRnhYNTZ4MS43NW9jeHI1cVBkeTEyMmx4MDVDSjVlIiwicm9sZSI6InVzZXIiLCJ3ZWxjb21lZCI6ZmFsc2UsImlhdCI6MTY5ODg2Mzg3OSwiZXhwIjoxNjk5MDM2Njc5fQ.mgaY5zy5d-kbmtp7FLfXstynIO4612f7bB57k_1l5rg
 
 
 ### checking user details
 GET http://localhost:5000/users/check_user_details
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZV9pZCI6IjBhZGJiM2I1LWRlYWQtNDQ4Zi05Y2ExLTQ0ZjkzZDBlNTUyNyIsIm5hbWUiOiJKYW5lIERvZSIsImVtYWlsIjoiamFuZUB5b3BtYWlsLmNvbSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTY5ODgyNjA3NywiZXhwIjoxNjk4ODI5Njc3fQ.SWJpmBD3z6n4cyeBupF5kGmuZwGGptMB3ragM_rN1rI
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgwZjg2MmMtMTgwYy00NThlLTlkMDAtNGIyNTEwNGVlNzFhIiwiZnVsbE5hbWUiOiJtaWxseSBtaWxsaWNlbnQyIiwiZW1haWwiOiJtaWxsaWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA1JFF2TW1ScWlHQlpDZWY4a1FGTjZ4ck9KRnhYNTZ4MS43NW9jeHI1cVBkeTEyMmx4MDVDSjVlIiwicm9sZSI6InVzZXIiLCJ3ZWxjb21lZCI6ZmFsc2UsImlhdCI6MTY5ODg2Mzg3OSwiZXhwIjoxNjk5MDM2Njc5fQ.mgaY5zy5d-kbmtp7FLfXstynIO4612f7bB57k_1l5rg

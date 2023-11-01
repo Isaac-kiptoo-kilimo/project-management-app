@@ -6,3 +6,5 @@ AS
 BEGIN
     SELECT * FROM Users WHERE email=@email
 END
+
+DROP PROCEDURE loginUser
