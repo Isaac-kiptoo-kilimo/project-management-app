@@ -52,6 +52,8 @@ export const loginUser=async(req:Request,res:Response)=>{
 
         let user=await (await pool.request().input("email",email).execute('loginUser')).recordset
 
+        console.log(user);
+        
         if(user[0]?.email==email){
             const correctPass=await bcrypt.compare(password,user[0]?.password)
 
@@ -62,7 +64,7 @@ export const loginUser=async(req:Request,res:Response)=>{
             }
 
             const loginCredentials=user.map(records=>{
-                const {email,password,welcomed, ...rest}=records
+                const {...rest}=records
                 return rest
             })
 
