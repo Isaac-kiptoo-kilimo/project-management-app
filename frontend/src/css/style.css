@@ -195,9 +195,9 @@ body{
     font-weight: normal;
     
   }
-  .paragr{
+ 
     
-  }
+  
   .bigcard{
     background-color: rgb(164, 200, 238);
     height: 700px;
@@ -325,10 +325,11 @@ body{
   }
   
   /* home style */
-  /* CSS code for styles.css (in the "css" folder) */
+
 .form-container {
     max-width: 400px;
     margin: 0 auto;
+ 
 }
 
 .form-group {
@@ -365,6 +366,43 @@ body{
 
 .form-group button:hover {
     background-color: #0056b3;
+}
+
+
+
+
+.homemenu{
+  background-color: rgb(164, 200, 238);
+  height: 487px;
+  width: 120px;
+  padding: 30px;
+  
+} 
+.containerhome{
+  height: 60vw;
+  display: flex;
+  gap: 40px;
+  width: 70vw;
+  background-color: aliceblue;
+  margin: 150px;
+  
+
+}
+
+.homemenu ul a:hover{
+  color: rgb(9, 41, 145);
+
+}
+.homemenu li{
+  list-style: none;
+}
+.homemenu a{
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+
+}
+.menu-items li{
+  margin: 30px 0;
 }
 
   
