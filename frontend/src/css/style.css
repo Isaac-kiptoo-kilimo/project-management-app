@@ -1,0 +1,384 @@
+
+
+body{
+    background-color: rgba(218, 231, 245, 1);
+    
+  }
+  .login-container{
+    display: flex;
+    background-color: aliceblue;
+    width: 700px;
+    margin: 60px 150px;
+    gap: 50px;
+    
+  }
+  .login-in{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 80px;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    
+  }
+  .login-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .login-form label{
+    font-size: 16px;
+  
+  }
+  .login-form input{
+    font-size: 12px
+  }
+  .login-form button{
+    margin-top: 10px;
+    background-color: rgba(31, 40, 69, 1);
+    color: white;
+    padding-right: 40px;
+    padding-left: 40px;
+    border: none;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+  }
+  .loginside img{
+    width: 360px;
+    height: 450px;
+  
+  }
+  .loginform p{
+    font-size: 12px;
+  }
+  .loginform span a{
+    font-size: 12px;
+    color: rgba(31, 40, 69, 1);
+  }
+  
+  /* projects style */
+  
+  body{
+    background-color: rgba(218, 231, 245, 1);
+    
+  }
+  .container{
+    display: flex;
+    background-color: aliceblue;
+    width: 1000px;
+    margin: 40px 20px;
+    gap: 50px;
+    height: 90vw;
+    
+  }
+  .in{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 80px;
+    
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .form label{
+    font-size: 16px;
+  
+  }
+  .form input{
+    font-size: 12px
+  }
+  .form button{
+    margin-top: 10px;
+    background-color: rgba(31, 40, 69, 1);
+    color: white;
+    padding-right: 40px;
+    padding-left: 40px;
+    border: none;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .side img{
+    width: 360px;
+    height: 450px;
+  
+  }
+  .form p{
+    font-size: 12px;
+  }
+  .form span a{
+    font-size: 12px;
+    color: rgba(31, 40, 69, 1);
+  }
+  
+  
+   
+  
+  
+  
+  .sidemenu{
+    background-color: rgb(164, 200, 238);
+    height: 84.5vw;
+    width: 120px;
+    padding: 30px;
+    
+  } 
+  .sidemenu ul a:hover{
+    color: rgb(9, 41, 145);
+  
+  }
+  .sidemenu li{
+    list-style: none;
+  }
+  .sidemenu a{
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+  
+  }
+  .menu-items li{
+    margin: 30px 0;
+  }
+  
+  .nav{
+    display: flex;
+    
+  }
+  
+  
+  .search {
+    position: relative;
+  }
+  
+  .search input[type="text"] {
+    padding-left: 40px;
+    background-image: url('./images/icons8-search.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 14px;
+    background-color:  rgb(164, 200, 238);
+    border: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 20vw;
+    
+  }
+  
+  .search input:focus {
+    outline: none;
+  }
+  .search input[type="text"] + label img {
+    fill: blue;
+    
+  }
+  .search input[type="text"]::placeholder {
+    margin-left: 20px;
+  }
+  .profile img{
+    width: 30px;
+    height: 30px;
+    border-radius:90%;
+    margin-top: 20px;
+    margin-right: 5px;
+  }
+  .profile{
+    display: flex;
+    margin-left: 300px;
+  
+  }
+  .paragr h5 span{
+    font-weight: normal;
+    
+  }
+  .paragr{
+    
+  }
+  .bigcard{
+    background-color: rgb(164, 200, 238);
+    height: 700px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 700px;
+    padding-right: 20px;
+    
+  }
+  .depart{
+    display: flex;
+    gap: 20px;
+  }
+  .depart ul.depart {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .depart ul.depart li {
+    margin: 0;
+  }
+  
+  .depart ul.depart li a {
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    font-size: 12px;
+    display: block;
+    padding: 5px;
+    border-radius:2px;
+    color: black;
+  }
+  
+  .view button {
+    border-radius: 0;
+    background-color: transparent;
+    color: grey;
+    display: flex;
+    align-items: center;
+    border: none;
+    
+  }
+  
+  
+  .view button img {
+    margin-left: 5px;
+  }
+  
+  
+  .work {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+  }
+  
+  .brand {
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:  rgb(193, 219, 245) ;
+  }
+  
+  .brand img {
+    max-width: 100%;
+  }
+  
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .side {
+    flex-grow: 1;
+  }
+  
+  h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  p {
+    margin: 0;
+    color: #2c2c2c;
+  }
+  
+  .details {
+    margin-top: 10px;
+  }
+  
+  .details p {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .brand .top img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .add-project {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .add-project button {
+    margin-left: auto;
+    background-color:  rgba(31, 40, 69, 1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  /* home style */
+  /* CSS code for styles.css (in the "css" folder) */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
