@@ -1,41 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Register User and Project</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"> 
 </head>
 <body>
-<div class="container">
-    <div class="container2">
-        <div class="sidemenu">
-            <h3>Project-Logo</h3>
-            <div class="clicks">
-                <div class="home">
-                <img src="" alt="">
-                <p>Home</p>
+    <div class="form-container">
+        <h2>Register User and Project</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
             </div>
-            <div class="dash">
-                <img src="" alt="">
-                <p>Dashboard</p>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
             </div>
-            <div class="projects">
-                <img src="" alt="">
-                <p>Projects</p>
+            <div class="form-group">
+                <label for="assigned">Person Assigned:</label>
+                <input type="text" id="assigned" name="assigned" required>
             </div>
-            <div class="users">
-                <img src="" alt="">
-                <p>Users</p>
+            <div class="form-group">
+                <label for="deadline">Task Deadline:</label>
+                <input type="date" id="deadline" name="deadline" required>
             </div>
-
+            <div class="form-group">
+                <button type="submit">Add Project</button>
             </div>
-        </div>
-        <div class="nav">
-            <img src="" alt="">
-            <p>Search project...</p>
-        </div>
+        </form>
     </div>
-</div>
-    
 </body>
 </html>
