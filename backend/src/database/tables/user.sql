@@ -8,10 +8,8 @@ CREATE TABLE Users(
     welcomed BIT Default 0
 )
 
-SELECT * FROM Users
+SELECT * FROM Users WHERE role!='Admin';
 
-
-DROP TABLE Users
 
 SELECT * FROM Users WHERE email ='isaackilimok2@gmail.com' 
 
