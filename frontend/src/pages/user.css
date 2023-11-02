@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color:lightblue;
+    height: 100vh;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+   padding-left: 10%;
+   margin-left: 10%;
+  }
+  
+  .sidebar li {
+    padding: 10px;
+    color: #fff;
+    line-height: 70px;
+  }
+  
+  .search-bar {
+    margin-top: 20px;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .search-bar button {
+    background-color: burlywood;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 100px;
+    
+   
+    
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    
+  }
+  
+  .complete {
+    background-color: green;
+    color: #fff;
+  }
+  
+  .progress {
+    background-color: blue;
+    color: #fff;
+  }
+  
+  
+  
+  @media only screen and (max-width: 600px) {
+    .sidebar {
+      width: 100%;
+    }
+    
+    .main {
+      margin-left: 0;
+    }
+  }
+  .bod{
+    display: inline;
+    display: flex;
+    gap: 20%;
+  }
+  
