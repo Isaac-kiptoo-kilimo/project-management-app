@@ -7,7 +7,7 @@ class TaskModal {
     constructor() {
         this.modal = document.getElementById("taskModal") as HTMLElement;
         this.closeModal = document.getElementById("closeModal") as HTMLElement;
-        this.addButton = document.querySelector("button") as HTMLElement;
+        this.addButton = document.querySelector("addtask") as HTMLElement;
         this.taskForm = document.getElementById("taskForm") as HTMLFormElement;
 
         this.closeModal.addEventListener("click", this.closeModalHandler.bind(this));
