@@ -203,9 +203,7 @@ body{
     font-weight: normal;
     
   }
-  .paragr{
-    
-  }
+ 
   .bigcard{
     background-color: rgb(164, 200, 238);
     height: 700px;
@@ -330,183 +328,354 @@ body{
     padding-right: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
-  } */
+  } 
   
   /* home style */
-  /* CSS code for styles.css (in the "css" folder) */
-.form-container {
-    max-width: 400px;
-    margin: 0 auto;
+ 
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.form-group {
-    margin-bottom: 20px;
+body {
+    font-family: Arial, sans-serif;
 }
 
-.form-group label {
-    display: block;
-    font-weight: bold;
+
+.container{
+    height: 40vw;
+  display: flex;
+  gap: 40px;
+  width: 90vw;
+  background-color: aliceblue;
+  margin: 150px 30px;
 }
 
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+body {
+    font-family: Arial, sans-serif;
 }
 
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-group button {
-    background-color: #007bff;
+.side-menu {
+    background-color:rgb(193, 219, 245);
     color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    width: 200px;
+    padding: 20px;
 }
 
-.form-group button:hover {
-    background-color: #0056b3;
-}
-
-
-
-.form-popup {
-
-    width: 100%;
-    
+.side-menu img {
     max-width: 100%;
-    background: aliceblue;
-   
 }
 
-.form-popup .form-box {
-    display: flex;
-}
-
-.form-box .form-details {
-    width: 100%;
-    color: #fff;
-    max-width: 330px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.form-box .form-content {
-    width: 100%;
-    padding: 0 20px;
-}
-
-.form-box h2 {
-    text-align: center;
-    margin-bottom: 29px;
-}
-
-form .input-field {
-    position: relative;
-    height: 50px;
-    width: 100%;
+.side-menu ul {
+    list-style: none;
+    padding: 0;
     margin-top: 20px;
 }
 
-.input-field input {
-    height: 100%;
-    width: 100%;
-    background: none;
-    outline: none;
-    font-size: 0.95rem;
-    padding: 0 15px;
-    border: 1px solid #717171;
-    border-radius: 3px;
+.side-menu li {
+    margin-bottom: 10px;
 }
 
-.input-field input:focus {
-    border: 1px solid rgba(31, 40, 69, 1);
-}
-
-.input-field label {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    color: #4a4646;
-    pointer-events: none;
-    transition: 0.2s ease;
-}
-
-.input-field input:is(:focus, :valid) {
-    padding: 16px 15px 0;
-}
-
-.input-field input:is(:focus, :valid)~label {
-    transform: translateY(-120%);
-    color: rgba(31, 40, 69, 1);
-    font-size: 0.75rem;
-}
-
-.form-box a {
-    color: rgba(31, 40, 69, 1);
+.side-menu a {
     text-decoration: none;
+    color: #000;
 }
 
-.form-box a:hover {
-    text-decoration: underline;
+.top-bar {
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
-form :where(.forgot-pass-link, .policy-text) {
-    display: inline-flex;
-    margin-top: 13px;
-    font-size: 0.95rem;
+.notifications,
+.profile,
+.search {
+    display: flex;
+    align-items: center;
 }
 
-form button {
-    width: 100%;
-    color: #fff;
-    border: none;
-    outline: none;
-    padding: 14px 0;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 3px;
-    cursor: pointer;
-    margin: 25px 0;
-    background: rgba(31, 40, 69, 1);
-    transition: 0.2s ease;
-}
-
-form button:hover {
-    background: rgba(31, 40, 69, 1);
-}
-
-.form-content .bottom-link {
-    text-align: center;
+.search input {
+    margin-right: 10px;
+    padding: 5px;
 }
 
 
-
-.signup .policy-text input {
-    width: 14px;
-    height: 14px;
-    margin-right: 7px;
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
+.task-card {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin-right: 30px;
+}
+
+.task-card h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.task-card p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.complete {
+  margin: 20px 0;
+}
+
+.progress-bar {
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  background: #4caf50;
+}
+
+
+
+
+/* users styling */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.homemenu {
+  width: 200px;
+  background-color:  rgb(193, 219, 245);
+  color: #000;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.homemenu h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.menu-items {
+  list-style: none;
+}
+
+.menu-items li {
+  margin-bottom: 10px;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #000;
+  margin-left: 10px;
+}
+
+.containeruser{
+  display: flex;
+    background-color: aliceblue;
+    width: 1000px;
+    margin: 40px 20px;
+    gap: 50px;
+    height: 50vw;
+    
+  }
+
+
+
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px;
+  background-color: #fff;
+  margin-left: 3px;
+ 
+
+}
+
+.users-table th, .users-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.users-table th {
+  background-color:  rgb(193, 219, 245);
+  color: #000;
+  font-weight: bold;
+}
+
+.users-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.users-table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+
+/* Landingpage styling */
+
+
+.hero {
+  background-image: url('./'); 
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+.navlandingpage{
+  display: flex;
+ gap: 390px;
+ margin-left: 150px;
+}
+nav ul{
+  display: flex;
+  gap: 10px;
+  margin-left: 70px;
+}
+nav ul a{
+  text-decoration: none;
+  color: #000;
+}
+nav li{
+  list-style: none;
+}
+
+
+
+.alternating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #f0f0f0;
+  padding: 40px 0;
+}
+
+.text-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.alternating img {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+}
+/* modal styling */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
