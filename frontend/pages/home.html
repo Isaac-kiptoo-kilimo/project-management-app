@@ -1,44 +1,111 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Register User and Project</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
+
 <body>
-    <div class="containerhome">
-    <div class="homemenu">
-        <h3>Project-Logo</h3>
-        <ul class="menu-items">
-            <li><a href="home.html">Home <img src="home.png" alt=""></a></li>
-            <li><a href="Dashboard">Dashboard <img src="dashboard.png" alt=""></a></li>
-            <li><a href="projects.html">Projects <img src="projects.png" alt=""></a></li>
-            <li><a href="users.html">Users <img src="users.png" alt=""></a></li>
+    <div class="container">
+    <div class="side-menu">
+        <img src="logo.png" alt="Logo">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#users">Users</a></li>
         </ul>
     </div>
-    <div class="form-container">
-        <h2>Register User and Project</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+
+    <div class="container2">
+
+    <div class="top-bar">
+        <div class="search">
+            <input type="text" placeholder="Search Task">
+            <!-- <button>Add Task</button> -->
+        </div>
+        <div class="left">
+        <div class="notifications">
+            <p>notifications</p>
+            <img src="./icons8-notification-16.png" alt="">
+        </div>
+        <div class="profile">
+            <p>profile</p>
+            <img src="./icons8-customer-16.png" alt="">
+           
+            
+        </div>
+    </div>
+    </div>
+
+    <div class="main-content">
+       
+
+    <div class="main-content">
+        <div class="task-input">
+          
+        </div>
+
+        <div class="tasks">
+            <div class="task-card">
+                <div class="task1">
+                <h3>Task 1</h3>
             </div>
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="4" required></textarea>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                <div class="complete">
+                    <p>Completion: 40%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%;"></div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="assigned">Person Assigned:</label>
-                <input type="text" id="assigned" name="assigned" required>
+
+            <div class="task-card">
+                <div class="task2">
+                    <h3>Task 2</h3>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                <div class="complete">
+                    <p>Completion: 40%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%;"></div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="deadline">Task Deadline:</label>
-                <input type="date" id="deadline" name="deadline" required>
+            
+            <div class="task-card">
+                <div class="task3">
+                    <h3>Task 3</h3>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                <div class="complete">
+                <p>Completion: 40%</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 40%;"></div>
+                </div>
             </div>
-            <div class="form-group">
-                <button type="submit">Add Project</button>
             </div>
-        </form>
+
+            <div class="task-card">
+                <div class="task4">
+                    <h3>Task 4</h3>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                <div class="complete">
+                    <p>Completion: 40%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%;"></div>
+                    </div>
+                </div>
+            
+        </div>
+        <div class="bot">
+            <button>Add task</button>
+        </div>
+       
     </div>
 </div>
+</div>
 </body>
+
 </html>
