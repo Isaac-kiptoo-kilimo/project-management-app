@@ -358,7 +358,7 @@ body {
 }
 
 .side-menu {
-    background-color: #54affa;
+    background-color:rgb(193, 219, 245);
     color: #fff;
     width: 200px;
     padding: 20px;
@@ -380,7 +380,7 @@ body {
 
 .side-menu a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
 }
 
 .top-bar {
@@ -415,13 +415,15 @@ body {
     grid-gap: 20px;
 }
 
-.task-card {
-    width: calc(33.33% - 20px);
-    margin-right: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
+
+  .task-card {
+    width: calc(25% - 10px); /* Adjust the width based on your desired layout */
+    background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 7px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .pagination {
@@ -491,42 +493,16 @@ body {
     border-radius: 10px;
     color: white;
 } */
-.task1{
-    background-color: #af54fa;
+.task{
+   
     width: 80px;
     height: 25px;
     padding-left: 10px;
     padding-top: 2px;
     border-radius: 8px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
-.task2{
-    background-color: #fa8354;
-    width: 80px;
-    height: 25px;
-    padding-left: 10px;
-    padding-top: 2px;
-    border-radius: 8px;
-    color: white;
-}
-.task3{
-    background-color: #54fa94;
-    width: 80px;
-    height: 25px;
-    padding-left: 10px;
-    padding-top: 2px;
-    border-radius: 8px;
-    color: white;
-}
-.task4{
-    background-color: #b65607;
-    width: 80px;
-    height: 25px;
-    padding-left: 10px;
-    padding-top: 2px;
-    border-radius: 8px;
-    color: white;
-}
+
 .bot button{
     background-color: #54affa;
     border: none;
@@ -537,6 +513,31 @@ body {
     border-radius: 10px;
     color: white;
 }
+
+
+.people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.person {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.person img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
 
 /* users styling */
 
