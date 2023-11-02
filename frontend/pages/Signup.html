@@ -3,34 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <main>
-      <div class="container">
-        <div class="in">
-          <h3>Create an account</h3>
-          <form class="form" id="signup-form">
-            <label for="FullName">Full Name</label>
-            <input type="text" placeholder="Full Name"  id="FullName"/>
-            <label for="Email">Email</label>
-            <input type="email" placeholder="Email" id="Email" />
-            <label for="Password">Password</label>
-            <input type="password" placeholder="Password"  id="Password"/>
-            <label for="Confirm-Password">Confirm Password</label>
-            <input type="password" placeholder="Password" id="Confirm-password" />
-            <button type="submit">Create account</button>
-            <p>
-              Already have an account?
-              <span><a href="login.html">Login Here</a></span>
-            </p>
-          </form>
+
+      <div class="login-container">
+      
+        <div class="login-in form-popup">
+            
+            <div class="form-box login">
+                <div class="loginside">
+                    <img
+                      src="../images/pexels-ovan-57690 (1).jpg"
+                      alt=""
+                    />
+                  </div>
+                <div class="form-content">
+                  
+                  <h2>CREATE AN ACCOUNT</h2>
+                    <form id="login-form">
+                     
+                      <div class="input-field">
+                        <input type="text"  id="FullName">
+                        <label>Full Name</label>
+                      </div>
+                        <div class="input-field">
+                            <input type="text" id="Email">
+                            <label>Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="Password">
+                            <label>Password</label>
+                        </div>
+                        <div class="input-field">
+                          <input type="password" iid="Confirm-password">
+                          <label>Confirm Password</label>
+                      </div>
+                        <a href="#" class="forgot-pass-link">Forgot password?</a>
+                        <button type="submit">Log In</button>
+                    </form>
+                    <p>
+                      Already have an account?
+                      <span><a href="login.html">Login Here</a></span>
+                    </p>
+                </div>
+            </div>
+            
+
+            
         </div>
-        <div class="side">
-          <img src="../images/pexels-ovan-57690 (1).jpg" alt="" />
-        </div>
+        
       </div>
+    
     </main>
 
     <script src="../dist/signup.js"></script>
