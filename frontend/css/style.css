@@ -345,7 +345,7 @@ body {
 
 
 .container{
-    height: 60vw;
+    height: 78vw;
   display: flex;
   gap: 40px;
   width: 90vw;
@@ -404,138 +404,60 @@ body {
 
 
 
-.task-input input,
-.task-input button {
-    margin-bottom: 10px;
+
+.bot button {
+  background: rgb(129, 209, 255);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 700px;
+  margin-top: 30px;
 }
 
-.tasks {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-gap: 20px;
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
-
-
-  .task-card {
-    width: calc(25% - 10px); /* Adjust the width based on your desired layout */
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.pagination span {
-    margin-right: 10px;
-    cursor: pointer;
-}
-
 
 .task-card {
-    width: 300px; 
-    margin-right: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin-right: 30px;
 }
-
 
 .task-card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 20px;
+  margin: 0;
 }
 
-.progress-bar p {
-    margin-top: 20px;
-    color: yellow;
-    
-    
-}
-.left{
-    display: flex;
-    gap: 10px;
-    margin-right: 5px;
+.task-card p {
+  font-size: 16px;
+  margin: 10px 0;
 }
 
-.complete{
-    margin-top: 20px;
-    
-}
-.complete p{
-    color: rgb(9, 107, 5);
+.complete {
+  margin: 20px 0;
 }
 
 .progress-bar {
-    height: 10px;
-    background-color: #ccc;
-    margin-top: 10px;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  position: relative;
 }
 
 .progress {
-    height: 100%;
-    background-color:rgb(65, 170, 61);
-}
-/* .search button{
-    background-color: #54affa;
-    border: none;
-    padding-left: 20px;
-    padding-top: 8px;
-    padding-right: 20px;
-    padding-bottom: 8px;
-    border-radius: 10px;
-    color: white;
-} */
-.task{
-   
-    width: 80px;
-    height: 25px;
-    padding-left: 10px;
-    padding-top: 2px;
-    border-radius: 8px;
-    color: rgb(0, 0, 0);
+  height: 100%;
+  border-radius: 10px;
+  background: #4caf50;
 }
 
-.bot button{
-    background-color: #54affa;
-    border: none;
-    padding-left: 20px;
-    padding-top: 8px;
-    padding-right: 20px;
-    padding-bottom: 8px;
-    border-radius: 10px;
-    color: white;
-}
-
-
-.people {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.person {
-    width: 50px;
-    height: 50px;
-    border: 2px solid #007bff;
-    border-radius: 50%;
-    margin: 5px;
-    overflow: hidden;
-}
-
-.person img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
 
 
 
@@ -627,4 +549,87 @@ body {
 .users-table tbody tr:nth-child(odd) {
   background-color: #fff;
 }
+
+
+/* Landingpage styling */
+
+
+.hero {
+  background-image: url('./'); 
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+.navlandingpage{
+  display: flex;
+ gap: 390px;
+ margin-left: 150px;
+}
+nav ul{
+  display: flex;
+  gap: 10px;
+  margin-left: 70px;
+}
+nav ul a{
+  text-decoration: none;
+  color: #000;
+}
+nav li{
+  list-style: none;
+}
+
+
+
+.alternating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #f0f0f0;
+  padding: 40px 0;
+}
+
+.text-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.alternating img {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
 
