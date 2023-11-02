@@ -29,9 +29,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importStar(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const usersRoute_1 = __importDefault(require("./Routes/usersRoute"));
+const cors_1 = __importDefault(require("cors"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use((0, express_1.json)());
+app.use((0, cors_1.default)());
 app.use('/users', usersRoute_1.default);
 app.use((error, req, res, next) => {
     res.json({
