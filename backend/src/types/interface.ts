@@ -11,3 +11,9 @@ export interface loginUser extends Request{
     email:string,
     password: string
 }
+
+export interface project{
+    project_name:string, 
+    description: string,
+    endDate: string, 
+}

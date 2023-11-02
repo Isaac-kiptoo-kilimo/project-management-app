@@ -1,8 +1,27 @@
-POST http://localhost:5000/users/loginUser
+POST http://localhost:5000/users/register
 Content-Type: application/json
 
 {
-    "fullName": "Emauel kip",
-    "email": "emanuelkip@gmail.com",
+    "fullName": "milly millicent2",
+    "email": "millie2@gmail.com",
     "password": "12345678"
 }
+
+
+### login 
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+   "email": "millie2@gmail.com",
+   "password": "12345678" 
+}
+
+### fetching users
+GET http://localhost:5000/users/
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgwZjg2MmMtMTgwYy00NThlLTlkMDAtNGIyNTEwNGVlNzFhIiwiZnVsbE5hbWUiOiJtaWxseSBtaWxsaWNlbnQyIiwiZW1haWwiOiJtaWxsaWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA1JFF2TW1ScWlHQlpDZWY4a1FGTjZ4ck9KRnhYNTZ4MS43NW9jeHI1cVBkeTEyMmx4MDVDSjVlIiwicm9sZSI6InVzZXIiLCJ3ZWxjb21lZCI6ZmFsc2UsImlhdCI6MTY5ODg2Mzg3OSwiZXhwIjoxNjk5MDM2Njc5fQ.mgaY5zy5d-kbmtp7FLfXstynIO4612f7bB57k_1l5rg
+
+
+### checking user details
+GET http://localhost:5000/users/checkUserDetails
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgwZjg2MmMtMTgwYy00NThlLTlkMDAtNGIyNTEwNGVlNzFhIiwiZnVsbE5hbWUiOiJtaWxseSBtaWxsaWNlbnQyIiwiZW1haWwiOiJtaWxsaWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA1JFF2TW1ScWlHQlpDZWY4a1FGTjZ4ck9KRnhYNTZ4MS43NW9jeHI1cVBkeTEyMmx4MDVDSjVlIiwicm9sZSI6InVzZXIiLCJ3ZWxjb21lZCI6ZmFsc2UsImlhdCI6MTY5ODg2Mzg3OSwiZXhwIjoxNjk5MDM2Njc5fQ.mgaY5zy5d-kbmtp7FLfXstynIO4612f7bB57k_1l5rg

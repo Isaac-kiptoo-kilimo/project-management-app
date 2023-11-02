@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router , Request, Response} from 'express';
 import { checkCredentials, getAllUsers, loginUser, registerUser } from '../controllers/userController';
 import { verifyToken } from '../middlewares/verifyToken';
 

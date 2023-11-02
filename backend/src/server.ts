@@ -1,12 +1,16 @@
 import express, { json ,Request,Response,NextFunction} from "express";
 import dotenv from 'dotenv'
 import userRouter from "./Routes/usersRoute";
+import cors from "cors"
 
 dotenv.config()
 
 const app=express();
 
 app.use(json());
+
+app.use(cors())
+
 app.use('/users',userRouter)
 
 

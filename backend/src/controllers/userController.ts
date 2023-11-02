@@ -45,50 +45,111 @@ export const registerUser=async(req:Request, res:Response)=>{
 
 }
 
-export const loginUser=async(req:Request,res:Response)=>{
-    try{
-        const { email,password }=req.body
-        const pool = await mssql.connect(dbConfig)
+// export const loginUser=async(req:Request,res:Response)=>{
+//     try{
+//         const { email,password }=req.body
 
-        let user=await (await pool.request().input("email",email).execute('loginUser')).recordset
+//         const pool = await mssql.connect(dbConfig)
 
-        if(user[0]?.email==email){
-            const correctPass=await bcrypt.compare(password,user[0]?.password)
+//         let user=await (await pool.request().input("email",email).execute('loginUser')).recordset
 
-            if(!correctPass){
+//         console.log(user);
+        
+//         if(user[0]?.email==email){
+//             // const correctPass=await bcrypt.compare(password,user[0]?.password)
+//             const correctPass=password
+//             if(!correctPass){
+//                 return res.status(401).json({
+//                     message: "Password is incorrect"
+//                 })
+//             }
+
+//             const loginCredentials=user.map(records=>{
+//                 const {...rest}=records
+//                 return rest
+//             })
+
+//             const token =jwt.sign(loginCredentials[0], process.env.SECRET as string, {
+//                 expiresIn: '48hrs'
+//             })
+
+//             return res.status(200).json({
+//                 message: 'logged in successfully', token
+//             })
+        
+//         }else{
+//             return res.json({
+//                 message: 'Email not found'
+//             })
+//         }
+
+//     }catch(error){
+//         return res.json({
+//             error:error
+//         })
+//     }
+// }
+
+
+export const loginUser = async (req: Request, res: Response) => {
+    try {
+        const { email, password } = req.body;
+
+        const pool = await mssql.connect(dbConfig);
+
+        const request = pool.request();
+        request.input('email', mssql.VarChar(200), email); 
+        request.input('password', mssql.VarChar(200), password); 
+
+        const user = await request.execute('loginUser');
+
+        if (user.recordset.length > 0) {
+           
+            const correctPass = user.recordset[0].password;  
+
+           
+            const isPasswordValid = await bcrypt.compare(password, correctPass);
+           
+
+            if (!isPasswordValid) {
                 return res.status(401).json({
                     message: "Password is incorrect"
-                })
+                });
             }
 
-            const loginCredentials=user.map(records=>{
-                const {email,password,welcomed, ...rest}=records
-                return rest
-            })
+            const loginCredentials = { ...user.recordset[0] };
 
-            const token =jwt.sign(loginCredentials[0],process.env.SECRET as string, {
-                expiresIn: '60000s'
-            })
+
+            const token = jwt.sign(loginCredentials, process.env.SECRET as string, {
+                expiresIn: '48hrs'
+            });
 
             return res.status(200).json({
-                message: 'logged in successfully', token
-            })
-        
-        }else{
+                message: 'Logged in successfully',
+                token
+            });
+        } else {
             return res.json({
                 message: 'Email not found'
-            })
+            });
         }
 
-    }catch(error){
+    } catch (error) {
         return res.json({
-            error:error
-        })
+            error: error
+        });
     }
-}
+};
+
 
 export const getAllUsers= async(req:Request,res:Response)=>{
     try{
+        const pool= await mssql.connect(dbConfig);
+        let users=(await pool.request().execute('fetchAllUsers')).recordset
+
+        return res.status(200).json({
+            users: users
+        })
 
     }catch(error){
         return res.json({
