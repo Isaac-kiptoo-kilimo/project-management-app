@@ -405,6 +405,35 @@ body{
   margin: 30px 0;
 }
 
+/* users style */
+/* Existing styles as before */
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th, .employee-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.employee-table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.employee-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.employee-table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+
   
   
   
