@@ -1,4 +1,3 @@
-import { resolve } from "styled-jsx/css";
 
 let loginEmail = document.getElementById('Email') as HTMLInputElement;
 let loginPassword = document.getElementById('Password') as HTMLInputElement;
@@ -90,7 +89,7 @@ loginForm.addEventListener('submit',(e)=>{
                 if(data['info'].role === 'user'){
                     localStorage.setItem('email', data['info'].email!)
                     location.href = 'user.html'
-                }else if(data['info'].role === 'admin'){
+                }else if(data['info'].role === 'Admin'){
                     localStorage.setItem('email', data['info'].email!)
                     location.href = 'projects.html'
                 }

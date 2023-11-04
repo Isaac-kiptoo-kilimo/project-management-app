@@ -457,6 +457,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
 
 body {
   font-family: Arial, sans-serif;
@@ -679,3 +680,21 @@ button {
 
 
 
+=======
+/* 
+@media screen and (max-width="400px"){
+  
+.form-popup .form-box {
+  display: flex;
+  flex-direction: column;
+}
+} */
+  
+  
+  
+  
+  
+  
+  
+  
+>>>>>>> a6e5ba2 (fix:fixing the tables)
