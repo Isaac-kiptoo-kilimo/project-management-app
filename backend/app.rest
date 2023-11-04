@@ -36,3 +36,6 @@ Content-Type: application/json
     "description": "to be ready by this weekend",
     "endDate": "12/13/2020"
 }
+
+### fetching users
+GET http://localhost:5000/projetc/
