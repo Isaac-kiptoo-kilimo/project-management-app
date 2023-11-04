@@ -25,3 +25,19 @@ export const createProject=async(req:Request,res:Response)=>{
         })
     }
 }
+
+export const getAllProjects= async(req:Request,res:Response)=>{
+    try{
+        const pool= await mssql.connect(dbConfig);
+        let users=(await pool.request().execute('fetchAllProjects')).recordset
+
+        return res.status(200).json({
+            users: users
+        })
+
+    }catch(error){
+        return res.json({
+            error: error
+        })
+    }
+}

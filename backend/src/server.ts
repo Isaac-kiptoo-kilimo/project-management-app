@@ -2,6 +2,7 @@ import express, { json ,Request,Response,NextFunction} from "express";
 import dotenv from 'dotenv'
 import userRouter from "./Routes/usersRoute";
 import cors from "cors"
+import projectRouter from "./Routes/projectRoute";
 
 dotenv.config()
 
@@ -12,6 +13,7 @@ app.use(json());
 app.use(cors())
 
 app.use('/users',userRouter)
+app.use('/project',projectRouter)
 
 
 app.use((error:Error,req:Request,res:Response,next:NextFunction)=>{

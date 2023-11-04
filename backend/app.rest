@@ -25,3 +25,14 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgwZjg2MmMtMTgwYy00
 ### checking user details
 GET http://localhost:5000/users/checkUserDetails
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgwZjg2MmMtMTgwYy00NThlLTlkMDAtNGIyNTEwNGVlNzFhIiwiZnVsbE5hbWUiOiJtaWxseSBtaWxsaWNlbnQyIiwiZW1haWwiOiJtaWxsaWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA1JFF2TW1ScWlHQlpDZWY4a1FGTjZ4ck9KRnhYNTZ4MS43NW9jeHI1cVBkeTEyMmx4MDVDSjVlIiwicm9sZSI6InVzZXIiLCJ3ZWxjb21lZCI6ZmFsc2UsImlhdCI6MTY5ODg2Mzg3OSwiZXhwIjoxNjk5MDM2Njc5fQ.mgaY5zy5d-kbmtp7FLfXstynIO4612f7bB57k_1l5rg
+
+
+######
+POST http://localhost:5000/project/
+Content-Type: application/json
+
+{
+    "project_name": "Angular Updates",
+    "description": "to be ready by this weekend",
+    "endDate": "12/13/2020"
+}
