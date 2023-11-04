@@ -2,8 +2,8 @@ POST http://localhost:5000/users/register
 Content-Type: application/json
 
 {
-    "fullName": "milly millicent2",
-    "email": "millie2@gmail.com",
+    "fullName": "Isaac Kilimo",
+    "email": "kilimok2@gmail.com",
     "password": "12345678"
 }
 
@@ -13,7 +13,7 @@ POST http://localhost:5000/users/login
 Content-Type: application/json
 
 {
-   "email": "millie2@gmail.com",
+   "email": "kilimok2@gmail.com",
    "password": "12345678" 
 }
 
@@ -45,3 +45,13 @@ GET http://localhost:5000/project/
 # Deleting a note
 ###
 DELETE http://localhost:5000/project/b5c6906b-3e90-44b8-b2dc-73dee6f3085a/
+
+
+###
+POST http://localhost:5000/project/assign
+Content-Type: application/json
+
+{
+    "user_id": "",
+    "project_id": "e56e3b97-bbc3-4fb0-a678-14082a741a49",
+}

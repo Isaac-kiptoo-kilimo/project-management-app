@@ -5,7 +5,8 @@ CREATE TABLE Users(
     email VARCHAR(300) NOT NULL UNIQUE,
     password VARCHAR(200) NOT NULL,
     role VARCHAR(20) Default 'user',
-    welcomed BIT Default 0
+    welcomed BIT Default 0,
+    isAssigned INT DEFAULT 0
 )
 
 SELECT * FROM Users
