@@ -41,3 +41,34 @@ export const getAllProjects= async(req:Request,res:Response)=>{
         })
     }
 }
+
+
+export const deleteProject=async(req:Request,res:Response)=>{
+    try{
+        let {projectID}=req.params
+
+        let data={
+            project_id:projectID,
+        }
+        console.log(data)
+
+        if(!data){
+            return res.status(422).json({
+                message:"Already deleted"
+            })
+        }else{
+            let result=await dphelper.execute('deleteProject',data)
+        
+            return res.status(200).json({
+                message:'Deleted successfully'
+            })
+        }
+        
+
+    }catch(error){
+        console.log(error)
+        return res.status(201).json({
+            message: "Error in deleting the project"
+        })
+    }
+}

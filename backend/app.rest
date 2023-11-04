@@ -38,4 +38,10 @@ Content-Type: application/json
 }
 
 ### fetching users
-GET http://localhost:5000/projetc/
+GET http://localhost:5000/project/
+
+
+
+# Deleting a note
+###
+DELETE http://localhost:5000/project/b5c6906b-3e90-44b8-b2dc-73dee6f3085a/
