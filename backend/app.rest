@@ -2,8 +2,8 @@ POST http://localhost:5000/users/register
 Content-Type: application/json
 
 {
-    "fullName": "Isaac Kilimo",
-    "email": "kilimok2@gmail.com",
+    "fullName": "Emmanuel kipsang",
+    "email": "emmanuelkip@gmail.com",
     "password": "12345678"
 }
 
@@ -19,39 +19,44 @@ Content-Type: application/json
 
 ### fetching users
 GET http://localhost:5000/users/
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgwZjg2MmMtMTgwYy00NThlLTlkMDAtNGIyNTEwNGVlNzFhIiwiZnVsbE5hbWUiOiJtaWxseSBtaWxsaWNlbnQyIiwiZW1haWwiOiJtaWxsaWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA1JFF2TW1ScWlHQlpDZWY4a1FGTjZ4ck9KRnhYNTZ4MS43NW9jeHI1cVBkeTEyMmx4MDVDSjVlIiwicm9sZSI6InVzZXIiLCJ3ZWxjb21lZCI6ZmFsc2UsImlhdCI6MTY5ODg2Mzg3OSwiZXhwIjoxNjk5MDM2Njc5fQ.mgaY5zy5d-kbmtp7FLfXstynIO4612f7bB57k_1l5rg
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZmQxNzFjMzEtODRlOC00NjM4LTkwOGYtODVlNWJkNmZmYzhiIiwiZnVsbE5hbWUiOiJJc2FhYyBLaWxpbW8iLCJlbWFpbCI6ImtpbGltb2syQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA1JEk2UVFvSWdKeFZiY2RIR2xoWmk5NGVoLkdncTBZaG1SRHUxUVpZT1dkZjlxeGNZa0lnUXVTIiwicm9sZSI6InVzZXIiLCJ3ZWxjb21lZCI6ZmFsc2UsImlzQXNzaWduZWQiOjAsImlhdCI6MTY5OTE2MTI4MCwiZXhwIjoxNjk5MzM0MDgwfQ.f5SHm_Drjy3Uc6zdyjjkJcV0YWWynOO9iTPbGZFeAFs
 
 
 ### checking user details
 GET http://localhost:5000/users/checkUserDetails
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgwZjg2MmMtMTgwYy00NThlLTlkMDAtNGIyNTEwNGVlNzFhIiwiZnVsbE5hbWUiOiJtaWxseSBtaWxsaWNlbnQyIiwiZW1haWwiOiJtaWxsaWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA1JFF2TW1ScWlHQlpDZWY4a1FGTjZ4ck9KRnhYNTZ4MS43NW9jeHI1cVBkeTEyMmx4MDVDSjVlIiwicm9sZSI6InVzZXIiLCJ3ZWxjb21lZCI6ZmFsc2UsImlhdCI6MTY5ODg2Mzg3OSwiZXhwIjoxNjk5MDM2Njc5fQ.mgaY5zy5d-kbmtp7FLfXstynIO4612f7bB57k_1l5rg
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZmQxNzFjMzEtODRlOC00NjM4LTkwOGYtODVlNWJkNmZmYzhiIiwiZnVsbE5hbWUiOiJJc2FhYyBLaWxpbW8iLCJlbWFpbCI6ImtpbGltb2syQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA1JEk2UVFvSWdKeFZiY2RIR2xoWmk5NGVoLkdncTBZaG1SRHUxUVpZT1dkZjlxeGNZa0lnUXVTIiwicm9sZSI6InVzZXIiLCJ3ZWxjb21lZCI6ZmFsc2UsImlzQXNzaWduZWQiOjAsImlhdCI6MTY5OTE1NDg2MSwiZXhwIjoxNjk5MzI3NjYxfQ._aiWrrKfkdYLNYjbpj-LFT2yi8x8x5r6x1vgI4Y4sGY
 
 
-######
+###### creating new projects
 POST http://localhost:5000/project/
 Content-Type: application/json
 
 {
-    "project_name": "Angular Updates",
+    "project_name": "React project",
     "description": "to be ready by this weekend",
-    "endDate": "12/13/2020"
+    "endDate": "12/13/2023"
 }
 
-### fetching users
+### fetching all projects
 GET http://localhost:5000/project/
 
 
 
-# Deleting a note
+# Deleting a project
 ###
 DELETE http://localhost:5000/project/b5c6906b-3e90-44b8-b2dc-73dee6f3085a/
 
 
-###
-POST http://localhost:5000/project/assign
+### assigning a project to user
+POST http://localhost:5000/project/assign/fd171c31-84e8-4638-908f-85e5bd6ffc8b/763e48ed-5dbc-4401-b05d-3527828a1c61/
 Content-Type: application/json
 
 {
-    "user_id": "",
-    "project_id": "e56e3b97-bbc3-4fb0-a678-14082a741a49",
+
 }
+
+### marking it has complete
+POST http://localhost:5000/project/complete/2c788edf-34b3-47a6-85ef-951478a98eb3/
+Content-Type: application/json
+
+{}

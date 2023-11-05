@@ -1,5 +1,5 @@
 import { Router , Request, Response} from 'express';
-import { assignProject, createProject, deleteProject, getAllProjects } from '../controllers/projectControllers';
+import { assignProject, createProject, deleteProject, getAllProjects, markProjectComplete } from '../controllers/projectControllers';
 
 
 const projectRouter=Router();
@@ -7,7 +7,9 @@ const projectRouter=Router();
 projectRouter.post('/', createProject);
 projectRouter.get('/', getAllProjects);
 projectRouter.delete('/:projectID', deleteProject);
-projectRouter.post('assign/', assignProject);
+projectRouter.post('/assign/:user_id/:project_id', assignProject);
+projectRouter.post('/complete/:project_id', markProjectComplete);
+
 
 
 

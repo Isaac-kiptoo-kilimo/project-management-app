@@ -7,3 +7,4 @@ BEGIN
     UPDATE projects 
     SET projectStatus ='assigned' , user_id=@user_id WHERE project_id=@project_id AND projectStatus='unassigned'
 END
+

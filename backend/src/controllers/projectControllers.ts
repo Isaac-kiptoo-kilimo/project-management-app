@@ -82,20 +82,23 @@ export const assignProject = async (req: Request, res: Response) => {
             project_id: project_id,
         };
       
+       console.log(data);
        
-        const project :any= await dbhelper.query('SELECT projectStatus FROM Projects WHERE project_id = @project_id');
+        // const project :any= await dbhelper.query('assignProject');
 
-        if (project.length === 0) {
-            return res.status(404).json({
-                message: 'Project not found',
-            });
-        }
+        // console.log(project)
 
-        if (project[0].projectStatus === 'assigned') {
-            return res.status(422).json({
-                message: 'Project is already assigned',
-            });
-        }
+        // if (project.length === 0) {
+        //     return res.status(404).json({
+        //         message: 'Project not found',
+        //     });
+        // }
+
+        // if (project[0].projectStatus === 'assigned') {
+        //     return res.status(422).json({
+        //         message: 'Project is already assigned',
+        //     });
+        // }
 
         let result=await dbhelper.execute('assignProject', data);
 
@@ -113,12 +116,20 @@ export const assignProject = async (req: Request, res: Response) => {
 
 export const markProjectComplete = async (req: Request, res: Response) => {
     try {
-        let { projectID } = req.params;
+        let { project_id } = req.params;
         const data = {
-            project_id: projectID,
+            project_id: project_id,
         };
-
+        console.log(data);
+        
         const result = await dbhelper.execute('markProjectComplete', data);
+        console.log(result);
+        
+        if (result.rowsAffected[0] === 0) {
+            return res.status(422).json({
+                message: 'Project is not in progress or does not exist',
+            });
+        }
 
         return res.status(200).json({
             message: 'Project marked as complete successfully',

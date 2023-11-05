@@ -4,10 +4,12 @@ CREATE TABLE Projects (
     description VARCHAR(500) NOT NULL,
     endDate VARCHAR(100) NOT NULL,
     deleted BIT DEFAULT 0,
-    projectStatus VARCHAR(255) DEFAULT 'unassigned' CHECK (projectStatus IN ('unassigned', 'assigned', 'in progress', 'completed')),
+    projectStatus VARCHAR(255) DEFAULT 'unassigned' CHECK (projectStatus IN ('unassigned', 'assigned')),
     user_id VARCHAR(100) FOREIGN KEY REFERENCES Users(user_id),
-    completed BIT DEFAULT 0
+    completed VARCHAR(255) DEFAULT 'in progress' CHECK (completed IN ('in progress', 'completed'))
+    
 );
+
 
 
 SELECT * FROM Projects

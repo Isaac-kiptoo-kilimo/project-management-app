@@ -12,7 +12,7 @@ const dbhelper=new Connection
 
 
 
-export const registerUser=async(req:Request, res:Response)=>{
+export const registerUserController=async(req:Request, res:Response)=>{
     try{
         console.log(req.body);
 
