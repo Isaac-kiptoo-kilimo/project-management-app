@@ -21,7 +21,7 @@ class TaskModal {
     }
 
     private closeModalHandler() {
-        this.modal.style display = "none";
+        this.modal.style.display = "none";
     }
 
     private closeModalOnOutsideClick(event: MouseEvent) {
