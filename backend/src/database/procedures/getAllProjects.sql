@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE fetchAllprojects
+CREATE OR ALTER PROCEDURE fetchAllProjects
 AS
 BEGIN
     SELECT * FROM Projects

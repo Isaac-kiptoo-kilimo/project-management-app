@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let loginEmail = document.getElementById('Email');
 let loginPassword = document.getElementById('Password');
 let loginForm = document.querySelector('#login-form');
@@ -65,7 +64,7 @@ loginForm.addEventListener('submit', (e) => {
                     localStorage.setItem('email', data['info'].email);
                     location.href = 'user.html';
                 }
-                else if (data['info'].role === 'admin') {
+                else if (data['info'].role === 'Admin') {
                     localStorage.setItem('email', data['info'].email);
                     location.href = 'projects.html';
                 }
