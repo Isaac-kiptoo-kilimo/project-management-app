@@ -146,10 +146,8 @@ export const getAllUsers= async(req:Request,res:Response)=>{
     try{
         const pool= await mssql.connect(dbConfig);
         let users=(await pool.request().execute('fetchAllUsers')).recordset
-
-        return res.status(200).json({
-            users: users
-        })
+        
+        return res.status(200).json(users)
 
     }catch(error){
         return res.json({
@@ -164,4 +162,26 @@ export const checkCredentials= async(req:ExtendedUser,res:Response)=>{
             info: req.info
         })
     }
+}
+
+
+export const  getSingleUser=async (req:Request,res:Response)=>{
+    try{
+
+          const {user_id}=req.params;
+
+          console.log(user_id);
+          const data = {
+                user_id: user_id,
+              };
+              const user = await dbhelper.execute('getSingleUser', data);
+         return res.json(user.recordset)
+          
+        
+
+    }catch(err){
+          console.log(err)
+
+    }
+
 }

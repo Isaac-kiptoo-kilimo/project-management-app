@@ -4,50 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
   </head>
   <body>
-    <main>
-      <div class="login-container">
-        <div class="login-in form-popup">
-
-        
-            
-            <div class="form-box login">
-                <div class="loginside">
-                    <img
-                      src="../images/pexels-dominika-roseclay-1089842.jpg"
-                      alt=""
-                    />
-                  </div>
-                <div class="form-content">
-                    <h2>LOGIN</h2>
-                    <form id="login-form">
-                        <div class="input-field">
-                            <input type="text" id="Email">
-                            <label>Email</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" id="Password">
-                            <label>Password</label>
-                        </div>
-                        <a href="#" class="forgot-pass-link">Forgot password?</a>
-                        <button type="submit">Log In</button>
-                    </form>
-                    <div class="bottom-link">
-                        Don't have an account?
-                        <a href="Signup.html" id="signup-link">Signup</a>
-                    </div>
-                </div>
-            </div>
-            
-
-            
-        </div>
-        
+    
+   <div class="main">
+    
+    <section class="wrapper ">
+      <div class="img">
+        <img src="../images/login.jpeg" width="100%"  alt="">
       </div>
-    </main>
+      <div class="form signup">
+        <header>Login</header>
+        <form id="login-form">
+          <input type="text" placeholder="Email address" id="Email" />
+          <input type="password" placeholder="Password"  id="Password"/>
+          <input type="submit" value="Login" />
+        </form>
+        <p class="form-bottom">
+          D'nt have an account?
+          <span><a href="Signup.html">Signup Here</a></span>
+        </p>
+      </div>
+      
+    </section>
 
+   </div>
     <script src="../dist/login.js"></script>
   </body>
 </html>

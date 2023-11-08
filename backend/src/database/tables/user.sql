@@ -14,6 +14,7 @@ SELECT * FROM Users
 
 DROP TABLE Users
 
-SELECT * FROM Users WHERE email ='isaackilimok2@gmail.com' 
+SELECT * FROM Users WHERE email ='isaackilimok2@gmail.com'
+DELETE FROM Users WHERE email='isaackilimok2@gmail.com'; 
 
 UPDATE Users SET role = 'admin' WHERE email = 'isaackilimok2@gmail.com'

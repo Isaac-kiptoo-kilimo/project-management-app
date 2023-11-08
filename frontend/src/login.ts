@@ -6,6 +6,7 @@ let loginForm = document.querySelector('#login-form') as HTMLFormElement;
 let email_error = document.getElementById('email-error') as HTMLSpanElement;
 let password_error = document.getElementById('password-error') as HTMLSpanElement;
 
+console.log(loginForm);
 
 
 loginForm.addEventListener('submit',(e)=>{
@@ -89,9 +90,9 @@ loginForm.addEventListener('submit',(e)=>{
                 if(data['info'].role === 'user'){
                     localStorage.setItem('email', data['info'].email!)
                     location.href = 'user.html'
-                }else if(data['info'].role === 'Admin'){
+                }else if(data['info'].role === 'admin'){
                     localStorage.setItem('email', data['info'].email!)
-                    location.href = 'projects.html'
+                    location.href = 'admin.html'
                 }
             })
         }

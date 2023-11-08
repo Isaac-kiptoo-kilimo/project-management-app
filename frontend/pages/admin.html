@@ -55,10 +55,10 @@
                   <div class="avatar avatar-md avatar-indicators avatar-online">
                     <img
                       alt="avatar"
-                      src="../images/avatar/avatar-13.jpg"
+                      src="../images/avatar/avatar-1.jpg"
                       class="rounded-circle"
                     />
-                    <h5 class="mb-1" id="user-full-name"></h5>User</h5>
+                    <h5 class="mb-1" id="user-full-name"></h5>Admin</h5>
                     
                   </div>
                 </a>
@@ -112,7 +112,7 @@
               class="rounded-circle" width="60px" height="60px"
             />
             </a>
-            <ul class="navbar-nav flex-column " id=" sideNavbar">
+            <ul class="navbar-nav flex-column" id="sideNavbar">
               <li class="nav-item">
              
                 <div
@@ -121,7 +121,7 @@
                   data-bs-parent="#sideNavbar"
                 >
                 <li class="nav-item">
-                  <a class="nav-link" href="user.html">
+                  <a class="nav-link" href="admin.html">
                     Dashboard
                   </a>
                 </li>
@@ -131,7 +131,14 @@
                         Home
                       </a>
                     </li>
-                
+                    <li class="nav-item">
+                      <a
+                        class="nav-link has-arrow"
+                        href="./users.html"
+                      >
+                        Users
+                      </a>
+                    </li>
           
                 </div>
               </li>
@@ -149,12 +156,41 @@
                   class="d-flex justify-content-between align-items-center mb-5"
                 >
                   <div class="mb-2 mb-lg-0">
-                    <h3 class="mt-5 text-dark">Project</h3>
+                    <h3 class="mt-5 text-dark">Projects</h3>
                   </div>
+                        
+
+                  <div>
+                    <button class="btn btn-primary" id="btn-create">Create New Project</button>
+                  </div>
+                  <div class="card-note" id="addNotecard">        
+          
+          
+                    <div class="container create-form-flex" >
+               
+                      <div class=" flex create-project">
+                        <div class="close">
+                          <i id="note-close" class="fa-regular fa-2x text-primary fa-circle-xmark"></i>
+                        </div>
+                        <form class="create-note-form" id="create-note-form">
+                        
+                          <h2 class="form-heading">CREATE A PROJECT</h2>
+                          <input type="text" placeholder="Name" id="name" >
+                          <textarea name="description" id="description" cols="40" rows="6" placeholder="Description"></textarea>
+                          <input type="text" placeholder="MM/DD/YYYY" id="endDate" >
+                          <div class="link">
+                            <button type="submit" class="login">Add Project</button>
+                          </div>
+                          <hr>
+                        </form>
+                      </div>
+                    </div>
+              
+                    </div>
                 </div>
               </div>
             </div>
-            <div class="card-list" id="project">
+            <div class="card-list" id="notes">
 
               
            
@@ -163,7 +199,7 @@
         </div>
       </div>
     </main>
-    <script src="../dist/user.js"></script>
+    <script src="../dist/admin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
