@@ -1,0 +1,235 @@
+
+:root {
+    --white-color: #fff;
+    --bg-color: #F1F5F9;
+    --gray-color: #ccc;
+  }
+  
+  
+  body {
+    background: var(--bg-color) !important;
+    
+  }
+  
+ 
+  .nav-item .nav-link {
+    color: var(--white-color);
+  }
+  
+  .navbar{
+    background-color: #8DA7B8;
+  }
+ 
+  .hero {
+    height: 90vh;
+    background-image: url("../images/image/hero5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+  }
+  
+  #projects i {
+    height: 80px;
+    width: 80px;
+  }
+  
+  #portfolio img {
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  #about .img,
+  #about img,
+  .hire-text h2 {
+    position: relative;
+  }
+  
+
+  #about .img::before {
+    content: "";
+    left: 50%;
+    width: 4px;
+    position: absolute;
+    height: calc(100% + 140px);
+    background: var(--gray-color);
+  }
+  
+  #about img,
+  #about .hire-text h2 {
+    width: 140px;
+  }
+  
+  #about .hire-text h2 {
+    height: 140px;
+  }
+  
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+  }
+  
+  footer .social-icons a {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* #cv img {
+    width: 230px;
+  } */
+  
+
+ 
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  max-width: 1250px;
+  margin: 10px auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card-list .card-item {
+  background: #fff;
+  padding: 26px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: border 0.5s ease;
+}
+
+.card-list .card-item:hover {
+  border: 2px solid #000;
+}
+
+.card-list .card-item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+
+.card-list .developer {
+  margin-bottom: 30px;
+  /* background-color: #F7DFF5;  */
+  /* color: #B22485; */
+}   
+
+
+
+.card-item h5 {
+  color: #000;
+  /* font-size: 1.438rem; */
+  margin: 30px 0;
+  font-weight: 600;
+}
+.card-item .arrow{
+display: flex;
+justify-content: space-between;
+}
+  
+  @media screen and (max-width: 990px) {
+    #skills .card {
+      width: calc(100% / 2 - 10px) !important;
+    }
+  }
+  
+  @media screen and (max-width: 668px) {
+    #skills .card,
+    #portfolio .card-wrapper {
+      width: 100% !important;
+    }
+   #about .hire-text h2 {
+     height: 70px;
+     width: 70px;
+   }
+  }
+
+  footer .content .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  
+  footer .bottom-details{
+    width: 100%;
+    background: #8DA7B8;
+  }
+  footer .bottom-details .bottom_text{
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+  .bottom-details .bottom_text a:hover{
+    opacity: 1;
+    text-decoration: underline;
+  }
+  .bottom-details .bottom_text a{
+    margin-right: 10px;
+  }
+  @media (max-width: 900px) {
+    footer .content .link-boxes{
+      flex-wrap: wrap;
+    }
+    footer .content .link-boxes .input-box{
+      width: 40%;
+      margin-top: 10px;
+    }
+  }
+  @media (max-width: 700px){
+    footer{
+      position: relative;
+    }
+    .content .top .logo-details{
+      font-size: 26px;
+    }
+    .content .top .media-icons a{
+      height: 35px;
+      width: 35px;
+      font-size: 14px;
+      line-height: 35px;
+    }
+    footer .content .link-boxes .box{
+      width: calc(100% / 3 - 10px);
+    }
+    footer .content .link-boxes .input-box{
+      width: 60%;
+    }
+    .bottom-details .bottom_text span,
+    .bottom-details .bottom_text a{
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 520px){
+    footer::before{
+      top: 145px;
+    }
+    footer .content .top{
+      flex-direction: column;
+    }
+    .content .top .media-icons{
+      margin-top: 16px;
+    }
+    footer .content .link-boxes .box{
+      width: calc(100% / 2 - 10px);
+    }
+    footer .content .link-boxes .input-box{
+      width: 100%;
+    }
+  }

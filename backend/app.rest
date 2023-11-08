@@ -2,8 +2,8 @@ POST http://localhost:5000/users/register
 Content-Type: application/json
 
 {
-    "fullName": "Emmanuel kipsang",
-    "email": "emmanuelkip@gmail.com",
+    "fullName": "Isaac Kilimo",
+    "email": "isaackilimok2@gmail.com",
     "password": "12345678"
 }
 
@@ -13,13 +13,18 @@ POST http://localhost:5000/users/login
 Content-Type: application/json
 
 {
-   "email": "kilimok2@gmail.com",
+   "email": "isaackilimok2@gmail.com",
    "password": "12345678" 
 }
 
 ### fetching users
 GET http://localhost:5000/users/
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZmQxNzFjMzEtODRlOC00NjM4LTkwOGYtODVlNWJkNmZmYzhiIiwiZnVsbE5hbWUiOiJJc2FhYyBLaWxpbW8iLCJlbWFpbCI6ImtpbGltb2syQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA1JEk2UVFvSWdKeFZiY2RIR2xoWmk5NGVoLkdncTBZaG1SRHUxUVpZT1dkZjlxeGNZa0lnUXVTIiwicm9sZSI6InVzZXIiLCJ3ZWxjb21lZCI6ZmFsc2UsImlzQXNzaWduZWQiOjAsImlhdCI6MTY5OTE2MTI4MCwiZXhwIjoxNjk5MzM0MDgwfQ.f5SHm_Drjy3Uc6zdyjjkJcV0YWWynOO9iTPbGZFeAFs
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTE4NjJiOTgtZGFlYi00NGMxLWI2NDUtYzA1NDkyZDVmODcxIiwiZnVsbE5hbWUiOiJJc2FhYyBLaWxpbW8iLCJlbWFpbCI6ImlzYWFja2lsaW1vazJAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDUkajMwQ3psQVhCeFl2OFZicG9KNm1tZWJuNkIuRkg5R3FMUDJOemhrei9DMGdhMEM1cjJuRWUiLCJyb2xlIjoidXNlciIsIndlbGNvbWVkIjpmYWxzZSwiaXNBc3NpZ25lZCI6MCwiaWF0IjoxNjk5MjczNDg5LCJleHAiOjE2OTk0NDYyODl9.Y2PsLblEGyvOcApAEo5HkH1xhPryxwvoY1KyeC6Zkx4
+
+
+### fetching user
+# GET http://localhost:5000/users/6a467541-1c49-41a8-bb53-24c33fb62389/
+
 
 
 ### checking user details
@@ -41,6 +46,8 @@ Content-Type: application/json
 GET http://localhost:5000/project/
 
 
+### fetching all projects
+GET http://localhost:5000/project/763e48ed-5dbc-4401-b05d-3527828a1c61/
 
 # Deleting a project
 ###
@@ -48,11 +55,12 @@ DELETE http://localhost:5000/project/b5c6906b-3e90-44b8-b2dc-73dee6f3085a/
 
 
 ### assigning a project to user
-POST http://localhost:5000/project/assign/fd171c31-84e8-4638-908f-85e5bd6ffc8b/763e48ed-5dbc-4401-b05d-3527828a1c61/
+POST http://localhost:5000/project/assign/user/
 Content-Type: application/json
 
 {
-
+"user_id":"fd171c31-84e8-4638-908f-85e5bd6ffc8b",
+"project_id":"763e48ed-5dbc-4401-b05d-3527828a1c61"
 }
 
 ### marking it has complete

@@ -4,6 +4,7 @@ let loginPassword = document.getElementById('Password');
 let loginForm = document.querySelector('#login-form');
 let email_error = document.getElementById('email-error');
 let password_error = document.getElementById('password-error');
+console.log(loginForm);
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let email = loginEmail.value;
@@ -64,9 +65,9 @@ loginForm.addEventListener('submit', (e) => {
                     localStorage.setItem('email', data['info'].email);
                     location.href = 'user.html';
                 }
-                else if (data['info'].role === 'Admin') {
+                else if (data['info'].role === 'admin') {
                     localStorage.setItem('email', data['info'].email);
-                    location.href = 'projects.html';
+                    location.href = 'admin.html';
                 }
             });
         }

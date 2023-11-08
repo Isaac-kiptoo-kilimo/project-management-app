@@ -1,8 +1,10 @@
  import { Request,Response } from "express"
- import mssql from 'mssql'
+ import mssql, { pool } from 'mssql'
 import { dbConfig } from "../config/db"
 import { v4 } from "uuid"
 import Connection from  "../dpHelpers/dphelpers"
+
+const sql = require('mssql');
 
 const dbhelper = new Connection
 
@@ -29,11 +31,9 @@ export const createProject=async(req:Request,res:Response)=>{
 export const getAllProjects= async(req:Request,res:Response)=>{
     try{
         const pool= await mssql.connect(dbConfig);
-        let users=(await pool.request().execute('fetchAllProjects')).recordset
+        let projects=(await pool.request().execute('fetchAllProjects')).recordset
 
-        return res.status(200).json({
-            users: users
-        })
+        return res.status(200).json(projects)
 
     }catch(error){
         return res.json({
@@ -41,6 +41,29 @@ export const getAllProjects= async(req:Request,res:Response)=>{
         })
     }
 }
+
+
+export const  getSingleProject=async (req:Request,res:Response)=>{
+    try{
+
+          const {project_id}=req.params;
+
+          console.log(project_id);
+          const data = {
+                project_id: project_id,
+              };
+              const project = await dbhelper.execute('getSingleProject', data);
+         return res.json(project.recordset)
+          
+        
+
+    }catch(err){
+          console.log(err)
+
+    }
+
+}
+
 
 
 export const deleteProject=async(req:Request,res:Response)=>{
@@ -75,43 +98,55 @@ export const deleteProject=async(req:Request,res:Response)=>{
 
 
 export const assignProject = async (req: Request, res: Response) => {
+    console.log(req.body);
+    
+
     try {
-        let { user_id, project_id } = req.params;
-        const data = {
-            user_id: user_id,
-            project_id: project_id,
-        };
-      
-       console.log(data);
-       
-        // const project :any= await dbhelper.query('assignProject');
+        const { project_id, user_id } = req.body;
 
-        // console.log(project)
+        // Call the stored procedure AssignProject in the database
+        const result = await pool.request()
+            .input('project_id', sql.NVarChar(100), project_id)
+            .input('user_id', sql.NVarChar(100), user_id)
+            .execute('AssignProject');
 
-        // if (project.length === 0) {
-        //     return res.status(404).json({
-        //         message: 'Project not found',
-        //     });
-        // }
-
-        // if (project[0].projectStatus === 'assigned') {
-        //     return res.status(422).json({
-        //         message: 'Project is already assigned',
-        //     });
-        // }
-
-        let result=await dbhelper.execute('assignProject', data);
-
-        return res.status(201).json({
-            message: 'Project assigned successfully',
-        });
+        if (result.returnValue === 0) {
+            // Project assigned successfully
+            res.status(200).json({ message: 'Project assigned successfully' });
+        } else {
+            // Project assignment failed (e.g., project is already assigned)
+            res.status(400).json({ message: 'Project assignment failed' });
+        }
     } catch (error) {
-        console.log(error);
-        return res.status(500).json({
-            message: 'Error in assigning the project',
-        });
+        // Handle errors
+        res.status(500).json({ error: "Did not loggin" });
     }
+    // try {
+    //     let { user_id, project_id } = req.params;
+    //     const data = {
+    //         user_id: user_id,
+    //         project_id: project_id,
+    //     };
+      
+    //    console.log(data);
+       
+      
+
+    //     let result=await dbhelper.execute('assignProject', data);
+
+    //     return res.status(201).json({
+    //         message: 'Project assigned successfully',
+    //     });
+    // } catch (error) {
+    //     console.log(error);
+    //     return res.status(500).json({
+    //         message: 'Error in assigning the project',
+    //     });
+    // }
 };
+
+
+
 
 
 export const markProjectComplete = async (req: Request, res: Response) => {
